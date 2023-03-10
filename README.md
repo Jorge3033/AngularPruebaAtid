@@ -9,7 +9,7 @@
 
 ### Use No cors Extensions
 
-Thi extension is esentiañ because the api used in this project, the cors blocked acccess origon.
+Thi extension is esential because the api used in this project, the cors blocked acccess origin.
 
 EXTENSION Recomended from chrome:
 
