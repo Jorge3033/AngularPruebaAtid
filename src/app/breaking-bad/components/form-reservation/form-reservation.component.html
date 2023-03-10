@@ -1,0 +1,97 @@
+<div class="form-group">
+  <form [formGroup]="form" class="form-body" (ngSubmit)="onSubmit()">
+
+    <div class="form-input-label">
+      <label for="question" class="label"> 
+        fecha
+      </label>
+      <input 
+      class="input-date"
+        type="date"
+        formControlName="date"
+        name="date"
+        id="date"
+      >
+
+      <mat-error *ngIf="date.hasError('required')">
+        La fecha es <strong>requerida</strong>
+      </mat-error>
+
+      <mat-error *ngIf="date.hasError('invalidDate')">
+        La fecha debe estar entre 11 meses y 1 dia despues de la fecha actual
+      </mat-error>
+
+    </div>
+
+    <div class="form-input-label">
+      <label for="question" class="label"> Pais </label>
+      <mat-form-field appearance="fill">
+        <mat-label>paices disponibles</mat-label>
+        <mat-select
+          formControlName="country"
+          placeholder="Selecciona el pais"
+          name="country"
+          id="country"
+        >
+          <mat-option *ngFor="let country of countries" [value]="country.country">
+            {{ country.country }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-error *ngIf="country.hasError('required')">
+        El pais es <strong>requerido</strong>
+      </mat-error>
+    </div>
+
+    <div class="form-input-label">
+      <label for="question" class="label"> nombre </label>
+      <mat-form-field class="example-form-field">
+        <input
+          matInput
+          formControlName="name"
+          type="text"
+          name="name"
+          id="name"
+          autocomplete="off"
+        />
+      </mat-form-field>
+
+      <mat-error *ngIf="name.hasError('required')">
+        El nomre es <strong>requerido</strong>
+      </mat-error>
+    </div>
+
+    <div class="form-input-label">
+      <label for="question" class="label"> Email </label>
+      <mat-form-field class="example-form-field">
+        <input
+          matInput
+          formControlName="email"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="test@gmail.com"
+          autocomplete="off"
+        />
+      </mat-form-field>
+
+      <mat-error *ngIf="email.hasError('required')">
+        El Email es <strong>requerido</strong>
+      </mat-error>
+
+      <mat-error *ngIf="email.hasError('pattern')">
+        El correo solo debe ser <strong>google y hotmail</strong>
+      </mat-error>
+    </div>
+
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="form.invalid"
+    >
+      Agregar
+    </button>
+  </form>
+</div>

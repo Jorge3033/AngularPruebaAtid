@@ -1,0 +1,40 @@
+<div class="form-group">
+
+  <h2>Acortar Url</h2>
+
+  <form [formGroup]="form" class="form-body" (ngSubmit)="onSubmit()">
+
+    <div class="form-input-label">
+      <label for="question" class="label"> url </label>
+      <mat-form-field class="example-form-field">
+        <input
+          matInput
+          formControlName="url"
+          type="url"
+          name="url"
+          id="url"
+          placeholder="https://www.google.com"
+          autocomplete="off"
+        />
+      </mat-form-field>
+
+      <mat-error *ngIf="url.hasError('required')">
+        la url es <strong>requerido</strong>
+      </mat-error>
+
+      <mat-error *ngIf="url.hasError('pattern')">
+        la url es <strong>invalida</strong>
+      </mat-error>
+    </div>
+
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="form.invalid"
+    >
+      Acortar
+    </button>
+
+  </form>
+</div>

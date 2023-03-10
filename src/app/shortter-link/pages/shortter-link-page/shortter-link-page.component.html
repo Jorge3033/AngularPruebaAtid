@@ -1,0 +1,7 @@
+<app-form-shortter-link
+  (shortUrl)="onShortUrl($event)"
+></app-form-shortter-link>
+
+<h2>Link Acorato</h2>
+
+<a *ngIf="isActive()" [href]="shortUrl.full_short_link" target="_blank">{{ shortUrl.full_short_link }}</a>

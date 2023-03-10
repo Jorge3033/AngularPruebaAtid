@@ -1,0 +1,17 @@
+<mat-drawer-container class="layout-container" autosize>
+  <mat-drawer #drawer class="layout-side-nav" mode="side" opened="true">
+    <app-sidebar [drawer]="drawer"></app-sidebar>
+  </mat-drawer>
+
+  <div class="layout-side-nav-content">
+    <app-nav-bar
+      [drawer]="drawer"
+      class="app-nav-bar d-flex"
+    ></app-nav-bar>
+
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+    
+  </div>
+</mat-drawer-container>

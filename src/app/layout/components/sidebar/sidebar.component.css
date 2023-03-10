@@ -1,0 +1,22 @@
+.layout-nav-logo {
+  height: 5rem;
+  display: grid;
+  padding: 0;
+  grid-template-columns: 1fr 1fr;
+}
+
+.layout-nav-logo .nav-logo {
+  font-size: 2.3rem;
+  text-align: center;
+  font-family: var(--font-primary);
+  font-weight: 700;
+  color: var(--color-light);
+}
+
+.layout-nav-logo mat-icon {
+  justify-self: end;
+  align-self: flex-start;
+  margin-right: 1.3rem;
+  font-size: 3rem;
+  color: var(--color-light);
+}

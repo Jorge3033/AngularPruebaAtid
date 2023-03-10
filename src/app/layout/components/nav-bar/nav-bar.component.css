@@ -1,0 +1,28 @@
+.nav-menu {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  /*Auto rezise the grid items to fit the grid container*/
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  margin-top: 0.9rem;
+}
+
+.nav-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+}
+
+.nav-icons-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1.7rem;
+  gap: 1.5rem;
+}
+
+.nav-system-name {
+  font-weight: 600;
+  /* separate letters */
+  letter-spacing: .2rem;
+  justify-self: center;
+}

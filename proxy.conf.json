@@ -1,0 +1,15 @@
+{
+  "/data/*": {
+    "target": "https://api.first.org",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/data": "/data/v1"
+    }
+  },
+  "/v1/*": {
+    "target": "https://api.breakingbadquotes.xyz",
+    "secure": true,
+    "changeOrigin": true
+  }
+}

@@ -1,0 +1,8 @@
+<app-card-breaking-bad-quotes
+*ngIf="currentQuote"
+[quote]="currentQuote"
+[canPrev]="canPrev"
+[canNext]="canNext"
+(onPrev)="onPrev()"
+(onNext)="onNext()"
+></app-card-breaking-bad-quotes>

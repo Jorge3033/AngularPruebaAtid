@@ -1,0 +1,14 @@
+<div class="layout-nav-logo">
+  <h1 class="nav-logo">Dashboard</h1>
+  <mat-icon
+    aria-hidden="false"
+    aria-label="menu-icon"
+    fontIcon="close"
+    (click)="toggleSideBar()"
+  ></mat-icon>
+</div>
+
+<app-nav-item
+  *ngFor="let navItem of navItems"
+  [navItems]="navItem"
+></app-nav-item>

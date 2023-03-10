@@ -1,0 +1,50 @@
+.layout-nav-tree {
+  background-color: inherit;
+  border: none;
+  box-shadow: none;
+  width: 100%;
+}
+
+.layout-nav-tree .nav-tree {
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+}
+
+.nav-tree-item {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: end;
+  justify-content: flex-start;
+  
+  background-color: inherit;
+  border: none;
+  color: var(--color-light);
+  font-size: var(--text-md);
+}
+
+.nav-tree-item-list {
+  background-color: inherit;
+  border: none;
+  box-shadow: none;
+  width: 100%;
+  list-style: none;
+  margin-left: 2rem;
+}
+
+
+.nav-tree-item-link , .nav-tree-item-link a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--color-light);
+  text-decoration: none;
+
+  font-size: 1.6rem;
+
+}
+
+.nav-tree-item mat-icon {
+  font-size: 2.5rem;
+  color: var(--color-light);
+}

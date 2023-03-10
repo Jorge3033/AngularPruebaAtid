@@ -1,0 +1,33 @@
+<mat-accordion>
+  <mat-expansion-panel
+    (opened)="panelOpenState = true"
+    (closed)="panelOpenState = false"
+    class="layout-nav-tree"
+  >
+    <mat-expansion-panel-header>
+      <mat-panel-description
+        class="nav-tree-item"
+      >
+        <mat-icon
+          aria-hidden="false"
+          aria-label="group-icon"
+          [fontIcon]="navItems.icon"
+        ></mat-icon>
+        {{ navItems.title }}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <ul class="nav-tree-item-list">
+      <li class="nav-tree-item-link"
+        *ngFor="let item of navItems.childrens; let i = index"
+        [class]="{ 'mt-1': i != 0 }"
+      >
+        <mat-icon
+          aria-hidden="false"
+          aria-label= "any"
+          [fontIcon]="item.icon"
+        ></mat-icon>
+        <a class="ml-1"  [routerLink]="[item.route]" routerLinkActive="router-link-active"  >{{ item.title }} </a>
+      </li>
+    </ul>
+  </mat-expansion-panel>
+</mat-accordion>
