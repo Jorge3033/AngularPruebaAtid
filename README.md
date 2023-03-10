@@ -2,7 +2,7 @@
 
 #### Clone this repository 
 
-``` git clone https://github.com/Jorge3033/angularTest.git ``` 
+``` git clone https://github.com/Jorge3033/AngularPruebaAtid.git ``` 
 
 ### Install Dependences 
 ``` npm install ```
